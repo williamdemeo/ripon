@@ -53,7 +53,7 @@ Python lacks some purely functional features, e.g.,
 
 ### FP in Python
 
-However, we *do* have
+.small[However, we *do* have]
 
 + functions as first-class objects
 + higher-order functions like   
