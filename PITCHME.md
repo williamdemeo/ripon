@@ -28,9 +28,13 @@ Teaching at Ripon College
 
 @box[text-orange span-80 fragment](Referential Transparency)
 
-@box[text-orange span-80 fragment](Data Sharing)  @box[text-orange span-80 fragment](Logic)
+@box[text-orange span-80 fragment](Data Sharing)  
 
-@box[text-orange span-80 fragment](Scalable) @box[text-orange span-80 fragment](Parallelizable) @box[text-orange span-80 fragment](Proof carrying code!)
+@box[text-orange span-80 fragment](Logic)
+
+@box[text-orange span-80 fragment](Scalable) 
+
+@box[text-orange span-80 fragment](Parallelizable) @box[text-orange span-80 fragment](Proof carrying code!)
 
 ---
 
