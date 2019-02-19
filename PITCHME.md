@@ -6,6 +6,7 @@ University of Colorado, Boulder
 Teaching at Ripon College  
 19 Feb 2019
 
+
 [williamdemeo@gmail.com](mailto:williamdemeo@gmail.com)
 
 ---
@@ -32,9 +33,11 @@ Teaching at Ripon College
 
 @box[text-orange span-80 fragment](Logic)
 
-@box[text-orange span-80 fragment](Scalable) 
+@box[text-orange span-80 fragment](Scalability) 
 
-@box[text-orange span-80 fragment](Parallelizable) @box[text-orange span-80 fragment](Proof carrying code!)
+@box[text-orange span-80 fragment](Parallelizability) 
+
+@box[span-80 fragment](Proof carrying code!)
 
 ---
 
