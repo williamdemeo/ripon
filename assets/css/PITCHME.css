@@ -26,6 +26,13 @@
   color: white;
   font-weight: bold;
 }
-
-.large { font-size: 130% }
-.small { font-size: 70% }
+.reveal .footer {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  font-size: 0.6em;
+}
+.reveal .slides {
+    text-align: left;
+    font-size: 0.6em;
+}
