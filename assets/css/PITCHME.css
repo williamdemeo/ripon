@@ -26,3 +26,6 @@
   color: white;
   font-weight: bold;
 }
+
+.large { font-size: 130% }
+.small { font-size: 70% }
