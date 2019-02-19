@@ -3,8 +3,7 @@
 [William DeMeo](mailto:williamdemeo@gmail.com)  
 University of Colorado, Boulder
 
-Ripon College  
-Teaching Demonstration  
+Teaching at Ripon College  
 19 Feb 2019
 
 [williamdemeo@gmail.com](mailto:williamdemeo@gmail.com)
@@ -13,22 +12,21 @@ Teaching Demonstration
 
 ### What is functional programming?
 
-+ FP is a programming paradigm or "style of programming"
++ FP is a programming paradigm or  
+  "style of programming"
 
-+ In comparison to "imperative" or "procedural" programs, *functional programs* tend to be more
++ In comparison to *imperative* or *procedural* programs, functional programs tend to be more
   1. reliable
   2. scalable
   3. parallelizable
 
 ---
 
-### What is functional programming?
+### What gives FP these nice features?
 
-+ What gives FP these nice features?
++ Immutability ~~> referential transparency ~~> data sharing ~~> sound logic
 
-  + Immutability -> referential transparency -> data sharing -> sound logic
-
-  + Often we can rigorously prove that a functional program is correct!
++ Often we can rigorously prove that a functional program is correct!
 
 ---
 
