@@ -1,18 +1,16 @@
-# Functional Programming in Python
+## Functional Programming in Python
 
 [William DeMeo &lt;williamdemeo@gmail.com&gt;](mailto:williamdemeo@gmail.com)  
 
-## Ripon College
-
-### Teaching Demonstration  
-
-### 19 Feb 2019
+Ripon College\
+Teaching Demonstration\
+19 Feb 2019
 
 [williamdemeo@gmail.com](mailto:williamdemeo@gmail.com)
 
 ---
 
-## What is functional programming?
+### What is functional programming?
 
 + FP is a programming paradigm or "style of programming"
 
@@ -21,7 +19,11 @@
   2. scalable
   3. parallelizable
 
-+ Why?  
+---
+
+### What is functional programming?
+
++ What gives FP these nice features?
 
   + Immutability -> referential transparency -> data sharing -> sound logic
 
@@ -29,7 +31,7 @@
 
 ---
 
-## Functional Programming in Python
+### Functional Programming in Python
 
 + Python is not a purely functional programming language.
 
@@ -39,23 +41,24 @@
 
 ---
 
-We can't easily create purely functional programs in Python. Python lacks a number of
-features that would be required for this. 
+### Python is not inherently functional
 
-We don't have:
+We can't easily create purely functional programs in Python. Python lacks a number of features that would be required for this. 
+
+For example, we don't have
   + unlimited recursion
   + lazy evaluation of all expressions
   + an optimizing compiler
 
-We **do** have:
-  + functions as first-class objects! 
+However, we **do** have
+  + functions as first-class objects
   + higher-order functions like `filter()`, `map()`, `reduce()`, `sorted()`, `min()`, `max()`
 
 Let's explore a few nice ideas from functional programming languages and use them to create succinct Python programs.
 
 ---
 
-## Definition
+### Definition
 
 A <a style="color:#e7ad52"><i>difference term</i></a> for $\mathcal{V}$ is a term $d$ satisfying, $\forall \; \mathbf A \in \mathcal V$ and $\forall a, b \in A$, 
 
@@ -66,7 +69,7 @@ where $\theta$ is any congruence containing $(a,b)$ and $[\cdot, \cdot]$ is the 
 
 ---
 
-## Imperative vs. functional paradigms: key distinction
+### Imperative vs. functional paradigms: key distinction
 
 + An **imperative program** works by transforming program state.
 
@@ -90,7 +93,7 @@ where $\theta$ is any congruence containing $(a,b)$ and $[\cdot, \cdot]$ is the 
 
 ---
 
-## FP
+### FP
 
 Each function evaluation creates a **new object** from existing objects.
 
@@ -105,7 +108,7 @@ It also makes it easy to locate test cases for formal unit testing.
 
 ---
 
-## Imperative Example: sum of squares
+### Imperative Example: sum of squares
 
 ```python
 def sum_of_squares(xs):
@@ -117,7 +120,7 @@ def sum_of_squares(xs):
 
 ---
 
-## Functional Example: sums of squares and cubes
+### Functional Example: sums of squares and cubes
 
 ```python
 def sum_of_squares(xs):
@@ -136,11 +139,9 @@ def sum_of_cubes(xs):
 ### The DRY Principle
 
 ```python
-def sq(x):
-  return x**2
+def sq(x): return x**2
 
-def cube(x):
-  return x**3
+def cube(x): return x**3
 
 def sum_of_squares(xs):
   if len(xs) == 0: return 0
@@ -153,9 +154,7 @@ def sum_of_cubes(xs):
   return cube(xs[0]) + sum_of_cubes(xs[1:])
 ```
 
-**Even worse?!**
-
----
+**Even worse?**
 
 ---
 
@@ -180,9 +179,9 @@ Now we can use **one** function `sum_reduce` to compute sum of squares and sum o
 
 ---
 
-## Can we do better? 
+### Can we do better? 
 
-### Can we generalize further?
+Can we generalize this further?
 
 What if we change our mind and want **products** of squares and cubes?
 
@@ -194,13 +193,11 @@ def prod_reduce(xs, f):
 
 `prod_reduce` and `sum_reduce` differ by just one character! 
 
-**We are... WET!**
-
-How can we fix this?
+**WET!** How can we fix this?
 
 ---
 
-## DRY this WET code!
+## WET --> DRY
 
 ```python
 # xs: sequence of elements of type T
@@ -213,11 +210,11 @@ def dry_reduce(xs, f, b):
   return b( xs[0], dry_reduce(xs[1:]) )
 ```
 
-Now, how do we implement sums or products of squares or cubes using this new function?
+How to implement sums/products of squares/cubes using this new function?
 
 ---
 
-## Reprise: sums and products of squares and cubes
+### Sums/products of squares/cubes (reprise)
 
 ```python
 # xs: sequence of elements of type T
@@ -230,15 +227,12 @@ def dry_reduce(xs, f, b):
   if len(xs) == 0: return 0
   return b( xs[0], dry_reduce(xs[1:]) )
 
-# sum of squares
-dry_reduce(xs, lambda x: x * x, lambda y: y + y)
+dry_reduce(xs, lambda x: x * x, lambda y: y + y)   # sum of squares
 
-# product of squares
-dry_reduce(xs, lambda x: x * x, lambda y: y * y)
+dry_reduce(xs, lambda x: x * x, lambda y: y * y)   # product of squares
 
-# sum of cubes
-dry_reduce(xs, lambda x: x**3, lambda y: y + y)
+dry_reduce(xs, lambda x: x**3, lambda y: y + y)    # sum of cubes
 
-# product of cubes
-dry_reduce(xs, lambda x: x**3, lambda y: y * y)
+dry_reduce(xs, lambda x: x**3, lambda y: y * y)    # product of cubes
+
 ```
