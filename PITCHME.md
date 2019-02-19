@@ -15,7 +15,7 @@ Teaching at Ripon College
 + FP is a programming paradigm or  
   "style of programming"
 
-+ In comparison to *imperative* or *procedural* programs, functional programs tend to be more
++ In comparison to *imperative* programs, functional programs tend to be more
   1. reliable
   2. scalable
   3. parallelizable
@@ -24,9 +24,10 @@ Teaching at Ripon College
 
 ### What gives FP these nice features?
 
-+ Immutability ~~> referential transparency ~~> data sharing ~~> sound logic
++ Immutability ~~> referential transparency  
+  &nbsp;&nbsp;  ~~> data sharing ~~> sound logic
 
-+ Often we can rigorously prove that a functional program is correct!
++ Often we **prove** that a functional program is correct!
 
 ---
 
@@ -34,37 +35,32 @@ Teaching at Ripon College
 
 + Python is not a purely functional programming language.
 
-+ Does that mean we must program imperatively ("disfunctionally") in Python?
++ Does that mean we must program *disfunctionally* in Python?
 
   No!
 
 ---
 
-### Python is not inherently functional
+### FP in Python
 
-We can't easily create purely functional programs in Python. Python lacks a number of features that would be required for this. 
+Python lacks some purely functional features, e.g.,
 
-For example, we don't have
-  + unlimited recursion
-  + lazy evaluation of all expressions
-  + an optimizing compiler
-
-However, we **do** have
-  + functions as first-class objects
-  + higher-order functions like `filter()`, `map()`, `reduce()`, `sorted()`, `min()`, `max()`
-
-Let's explore a few nice ideas from functional programming languages and use them to create succinct Python programs.
++ unlimited recursion
++ lazy evaluation of all expressions
++ an optimizing compiler
 
 ---
 
-### Definition
+### FP in Python
 
-A <a style="color:#e7ad52"><i>difference term</i></a> for $\mathcal{V}$ is a term $d$ satisfying, $\forall \; \mathbf A \in \mathcal V$ and $\forall a, b \in A$, 
+However, we *do* have
 
-$$d(a,a,b) = b \quad \text{ and } \quad
-d(a,b,b) \mathrel{[\theta, \theta]} a$$
++ functions as first-class objects
++ higher-order functions like `filter()`, `map()`, `reduce()`, `sorted()`, `min()`, `max()`
 
-where $\theta$ is any congruence containing $(a,b)$ and $[\cdot, \cdot]$ is the *commutator*.
+---
+
+Let's explore a few nice ideas from functional programming languages and use them to create succinct, general Python programs.
 
 ---
 
