@@ -27,7 +27,7 @@ Teaching at Ripon College
 + Immutability ~~> referential transparency  
   &nbsp;&nbsp;  ~~> data sharing ~~> sound logic
 
-+ Often we **prove** that a functional program is correct!
++ Often we can **prove** that a functional program is correct!
 
 ---
 
@@ -35,7 +35,7 @@ Teaching at Ripon College
 
 + Python is not a purely functional programming language.
 
-+ Does that mean we must program *disfunctionally* in Python?
++ Does that mean we must program *dysfunctionally* in Python?
 
   No!
 
@@ -56,11 +56,12 @@ Python lacks some purely functional features, e.g.,
 However, we *do* have
 
 + functions as first-class objects
-+ higher-order functions like `filter()`, `map()`, `reduce()`, `sorted()`, `min()`, `max()`
++ higher-order functions like   
+  `filter()`, `map()`, `reduce()`
 
 ---
 
-Let's explore a few nice ideas from functional programming languages and use them to create succinct, general Python programs.
+Let's explore a few functional programming ideas and use them to create succinct, general Python programs.
 
 ---
 
