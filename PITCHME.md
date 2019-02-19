@@ -2,11 +2,13 @@
 
 [William DeMeo &lt;williamdemeo@gmail.com&gt;](mailto:williamdemeo@gmail.com)  
 
-<a style="color:#e7ad52">
-Ripon College  
-Teaching Demonstration  
-19 Feb 2019
-</a>
+## Ripon College
+
+### Teaching Demonstration  
+
+### 19 Feb 2019
+
+[williamdemeo@gmail.com](mailto:williamdemeo@gmail.com)
 
 ---
 
@@ -227,11 +229,7 @@ Now, how do we implement sums or products of squares or cubes using this new fun
 def dry_reduce(xs, f, b):
   if len(xs) == 0: return 0
   return b( xs[0], dry_reduce(xs[1:]) )
-```
 
-<p class="fragment" align="left">
-
-```python
 # sum of squares
 dry_reduce(xs, lambda x: x * x, lambda y: y + y)
 
@@ -244,6 +242,3 @@ dry_reduce(xs, lambda x: x**3, lambda y: y + y)
 # product of cubes
 dry_reduce(xs, lambda x: x**3, lambda y: y * y)
 ```
-
-</p>
-
