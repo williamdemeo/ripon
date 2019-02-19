@@ -24,10 +24,13 @@ Teaching at Ripon College
 
 ### What gives FP these nice features?
 
-+ Immutability ~~> referential transparency  
-  &nbsp;&nbsp;  ~~> data sharing ~~> sound logic
+@box[text-orange span-80 fragment](Immutability)
 
-+ Often we can **prove** that a functional program is correct!
+@box[text-orange span-80 fragment](Referential Transparency)
+
+@box[text-orange span-80 fragment](Data Sharing)  @box[text-orange span-80 fragment](Logic)
+
+@box[text-orange span-80 fragment](Scalable) @box[text-orange span-80 fragment](Parallelizable) @box[text-orange span-80 fragment](Proof carrying code!)
 
 ---
 
