@@ -1,9 +1,10 @@
 ## Functional Programming in Python
 
-[William DeMeo &lt;williamdemeo@gmail.com&gt;](mailto:williamdemeo@gmail.com)  
+[William DeMeo](mailto:williamdemeo@gmail.com)  
+University of Colorado, Boulder
 
-Ripon College\
-Teaching Demonstration\
+Ripon College  
+Teaching Demonstration  
 19 Feb 2019
 
 [williamdemeo@gmail.com](mailto:williamdemeo@gmail.com)
